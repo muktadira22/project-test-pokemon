@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap");
+* {
+  font-family: "Roboto", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.pokemon-layout {
+  background-color: #e0e0e0;
+
+  &__header {
+    background-color: #ff0000;
+    margin-bottom: 2em;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 20px solid #ffde00;
+    box-shadow: 0px 5px 20px -10px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 5px 20px -10px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 5px 20px -10px rgba(0, 0, 0, 0.75);
+    & .pokemon-logo {
+      width: 300px;
+    }
+  }
+
+  &__content {
+    margin-left: 100px;
+    margin-right: 100px;
+
+    // Searching Style
+    & .search-pokemon {
+
+      & > input {
+        font-size: 1.3em;
+        height: 40px;
+        color: #ff0000;
+        font-weight: 700;
+        border-radius: 10px;
+
+        &::placeholder {
+          color: #ff0000;
+          opacity: 0.3;
+        }
+      }
+    }
+
+
+    // Button Style
+    & .btn-pokemon {
+      padding: 0px;
+      margin-bottom: 10px;
+      border-radius: 10px;
+      border: none;
+      background-color: #ff0000;
+
+      & a {
+        padding: 20px 40px;
+        font-size: 1.5em;
+        font-weight: bold;
+        color: #fff;
+      }
+
+      &:hover {
+        background-color: #fff;
+
+        & a {
+          color: #ff0000;
+        }
+      }
+    }
+
+    // Card Style
+    & .pokemon-card {
+      padding: 2em;
+      width: 100% !important;
+      border-radius: 1em;
+      background: rgb(59, 76, 202);
+      position: relative;
+      right: 0;
+      bottom: 0;
+      transition: right 0.2s ease 0s, bottom 0.2s ease 0s, box-shadow 0, 2s;
+      background: linear-gradient(
+        180deg,
+        rgba(59, 76, 202, 1) 0%,
+        rgba(23, 37, 138, 1) 82%
+      );
+
+      & .ant-card-meta-title {
+        color: #fff;
+        font-size: 1.8em;
+        text-align: center;
+        font-weight: 700;
+      }
+      & .ant-card-meta-description {
+        color: #fff;
+      }
+      &-hovered:hover {
+        box-shadow: 6px 6px 0px 3px #10163c;
+        position: relative;
+        right: 6px;
+        bottom: 6px;
+        border: none;
+      }
+
+      & img {
+        width: 100%;
+      }
+    }
+
+    & .pokemon-pagination {
+      font-size: 3em;
+      text-align: center;
+      font-weight: bold;
+      &__btn {
+        background-color: #cc0000;
+        border: none;
+        color: #ffde00;
+        -webkit-transition: background-color 0.2s, font-size 0.2s;
+        -moz-transition: background-color 0.2s, font-size 0.2s;
+        -o-transition: background-color 0.2s, font-size 0.2s;
+        transition: background-color 0.2s, font-size 0.2s;
+        border-radius: 5px;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+      }
+
+      &__btn:hover {
+        color: #b3a125;
+        background-color: #ff0000;
+        cursor: pointer;
+        font-size: 1.1em;
+      }
+      &__count {
+        margin-right: 40px;
+        margin-left: 40px;
+        color: rgb(59, 76, 202);
+      }
+    }
+
+    // Detail Pokemon Style
+    & .pokemon-detail {
+      & .type-icon {
+        width: 30px;
+      }
+
+      // Style For Description
+      & .ant-descriptions {
+        &-title {
+          color: #fff;
+          font-size: 2em;
+          text-transform: capitalize;
+        }
+
+        &-view {
+          & > table > tbody {
+            & th {
+              font-weight: bold;
+            }
+
+            & td {
+              font-weight: bold;
+              color: #fff;
+
+              & .base-experience {
+                font-size: 2em;
+                background-color: #ffde00;
+                padding: 10px 20px;
+                border-radius: 10px;
+                color: #000;
+              }
+
+              & .types {
+                text-align: center;
+              }
+            }
+          }
+        }
+      }
+
+      & .stats-detail {
+        & .stat-title {
+          color: #000;
+          font-size: 1.3em;
+          font-weight: bold;
+        }
+
+        & > div {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  &__footer {
+    background: rgb(224, 224, 224);
+    background: linear-gradient(
+      180deg,
+      rgba(224, 224, 224, 1) 0%,
+      rgba(174, 174, 174, 1) 76%
+    );
+
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+}
